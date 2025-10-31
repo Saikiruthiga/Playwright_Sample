@@ -21,7 +21,6 @@ export default defineConfig({
  webServer: {
   command: 'cd Rating && npm run build && npm run start',
   url: 'http://localhost:3000',
-  reuseExistingServer: !process.env.CI, // process.env.ci is undefined locally so it turns true means it use the existing server
-                                        // in CI process.env.ci true so it turns false, each time it create fresh server.
+  reuseExistingServer: true, 
  }
 })
